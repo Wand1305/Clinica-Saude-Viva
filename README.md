@@ -12,9 +12,8 @@ Este projeto consiste em uma landing page simples para a Clínica Saúde Viva.
 
 ## Como executar o projeto
 
-1. Copie este repositório:
+1. Copie o link do site e cole em seu navegdor:
     ```
-    https://github.com/Wand1305/Clinica-Saude-Viva.git
+    https://wand1305.github.io/Clinica-Saude-Viva/
     ```
-
-2. Abra o arquivo `index.html` no navegador ou use a extensão Live Server no VSCode.
+    
