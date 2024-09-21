@@ -1,0 +1,401 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    color: #333;
+    scroll-behavior: smooth; /* Transição suave entre seções */
+}
+
+/* Faixa Superior de Contato */
+.contact-bar {
+    background-color: #5eaea2; /* Verde água */
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1001; /* Acima do cabeçalho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: none; /* Garantir que não há borda inferior */
+    margin-bottom: 0; /* Remove qualquer margem inferior */
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info .icon {
+    font-size: 20px; /* Ajuste do tamanho dos ícones */
+    margin-right: 8px;
+}
+
+.contact-text {
+    margin-right: 15px;
+}
+
+/* Estilo dos ícones de redes sociais */
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    font-size: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+    color: white; /* Cor dos ícones */
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ccc; /* Cor dos ícones ao passar o mouse */
+}
+
+/* Estilo do botão de agendamento */
+.schedule-button {
+    margin-left: 20px; /* Espaço à esquerda do botão */
+}
+
+.schedule-button button {
+    background-color: #0073e6; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.schedule-button button:hover {
+    background-color: #005bb5; /* Cor ao passar o mouse */
+}
+
+/* Estilo do menu de navegação */
+header {
+    background-color: white; /* Fundo branco no cabeçalho */
+    position: fixed;
+    width: 100%;
+    top: 35px; /* Ajusta para que o cabeçalho fique logo abaixo da faixa de contato */
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do cabeçalho */
+    align-items: center;
+    border-bottom: none; /* Remover a borda inferior para eliminar a linha preta */
+    padding: 10px 20px; /* Ajustar o padding se necessário */
+    height: auto; /* Ajusta a altura do cabeçalho */
+}
+
+/* Estilo do menu de navegação */
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column; /* Imagem e nome da clínica em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+.clinic-name {
+    font-size: 1.2rem; /* Ajuste conforme necessário */
+    color: #0073e6; /* Cor do nome da clínica */
+    margin-top: 5px; /* Espaçamento entre imagem e nome */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+nav ul li {
+    padding: 10px 0;
+}
+
+nav ul li a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.1s ease, color 0.1s ease;
+    white-space: nowrap;
+}
+
+nav ul li a.active {
+    background-color: #0073e6;
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: #005bb5;
+    color: white;
+}
+
+/* Estilo das seções */
+section {
+    padding: 80px 20px; /* Aumentado o padding-top para descer mais as seções */
+    min-height: 100vh;
+    padding-top: 180px; /* Ajustado o padding-top para não sobrepor o cabeçalho fixo */
+    background-color: transparent; /* Fundo transparente para seções se destacarem */
+    display: flex;
+    justify-content: center; /* Centraliza a caixa de conteúdo */
+}
+
+.section-content {
+    background-color: #ffffff; /* Cor de fundo da caixa */
+    border-radius: 15px; /* Borda arredondada */
+    padding: 20px; /* Padding interno reduzido */
+    max-width: 900px; /* Largura máxima da caixa ajustada */
+    width: 100%; /* Largura completa da caixa até a largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+}
+
+#inicio .section-content {
+    background-color: #f4f4f4;
+}
+
+#atendimento .section-content {
+    background-color: #d0eafc;
+}
+
+#laboratorio .section-content {
+    background-color: #d0fcd0;
+}
+
+#imagem .section-content {
+    background-color: #fcfcd0;
+}
+
+#nutricao .section-content {
+    background-color: #d0fcf8;
+}
+
+#procedimentos .section-content {
+    background-color: #fcd0e4;
+}
+
+/* Estilo para cada seção com imagem e texto */
+.section-content {
+    display: flex;
+    align-items: flex-start; /* Alinha o início do texto com a imagem */
+    justify-content: center;
+    gap: 30px; /* Ajuste do espaço entre imagem e texto */
+}
+
+.section-content.invertido {
+    flex-direction: row-reverse;
+}
+
+.imagem img {
+    width: 300px; /* Ajuste do tamanho das imagens */
+    height: auto;
+    border-radius: 10px;
+}
+
+.texto {
+    max-width: 550px; /* Ajustar largura máxima do texto */
+}
+
+.texto h1, .texto h2 {
+    color: #0073e6;
+    font-size: 2rem; /* Tamanho do título ajustado */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    margin-top: 0; /* Remove margem superior */
+}
+
+.texto p {
+    font-size: 1.1rem; /* Tamanho do texto ajustado */
+    line-height: 1.6; /* Aumenta a altura da linha */
+    color: #333;
+    margin-bottom: 15px; /* Aumenta o espaço entre parágrafos */
+}
+
+.texto p:first-of-type {
+    margin-bottom: 30px; /* Maior espaçamento abaixo do primeiro parágrafo */
+}
+
+.texto ul {
+    font-size: 1.1rem; /* Tamanho da lista ajustado */
+    line-height: 1.6; /* Aumenta a altura da linha */
+    color: #333;
+    margin-bottom: 30px; /* Adiciona espaço abaixo da lista */
+    padding-left: 0; /* Remove o padding esquerdo padrão */
+    list-style-type: disc;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 10px; /* Espaçamento entre colunas e linhas */
+}
+
+.texto ul li {
+    margin-bottom: 15px; /* Espaço entre itens da lista */
+}
+
+/* Estilo do modal */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1002; /* Acima do cabeçalho */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Adiciona rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 4% auto; /* Centraliza verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilos do botão de fechar */
+.close-button {
+    display: inline-block;
+    background-color: #ccc; /* Cor de fundo cinza */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    position: absolute; /* Para posicionar no canto */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.close-button:hover {
+    background-color: #aaa; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo do botão enviar */
+.send-button {
+    background-color: #0073e6; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+.send-button:hover {
+    background-color: #005bb5; /* Cor ao passar o mouse */
+}
+
+/* Estilo do título do modal */
+.modal-title {
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #0073e6; /* Cor do título igual à do botão */
+    font-size: 1.5rem; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+/* Estilo para os rótulos dos campos */
+.form-group label {
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #777; /* Cor cinza para os rótulos */
+    margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
+}
+
+/* Aumento do espaçamento nos parágrafos do modal */
+.modal-content p {
+    margin-bottom: 5px; /* Aumenta o espaço entre parágrafos */
+    line-height: 1.6; /* Aumenta a altura da linha */
+}
+
+/* Aumento do espaçamento nas caixas de texto */
+input, textarea {
+    margin-bottom: 5px; /* Espaço abaixo das caixas de texto */
+    padding: 10px; /* Espaço interno nas caixas de texto */
+    width: calc(100% - 22px); /* Ajusta a largura considerando o padding */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Novos estilos para o formulário do modal */
+.form-group {
+    margin-bottom: 5px; /* Aumenta o espaço entre os campos */
+}
+
+.modal-content label {
+    display: block; /* Garante que cada label fique em sua linha */
+    margin-bottom: 5px; /* Espaço entre o label e o input */
+}
+
+/* Estilo do modal de confirmação */
+#confirmationModal .modal-content {
+    text-align: center; /* Centraliza o texto no modal de confirmação */
+}
+
+#confirmationModal .modal-content h2 {
+    margin-bottom: 15px; /* Espaço abaixo do título da confirmação */
+}
+
+#confirmationModal .modal-content button {
+    margin-top: 10px; /* Espaço acima do botão OK */
+    background-color: #0073e6; /* Cor do botão OK */
+    color: white; /* Cor do texto do botão OK */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+#confirmationModal .modal-content button:hover {
+    background-color: #005bb5; /* Cor ao passar o mouse no botão OK */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+    }
+
+    .imagem img {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .texto ul {
+        grid-template-columns: 1fr; /* Uma coluna em dispositivos menores */
+    }
+}
