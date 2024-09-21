@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Rolagem suave ao clicar nos links do menu
     navLi.forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault(); // Evita o comportamento padrão do link
+            e.preventDefault();
 
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
-                const topPosition = targetSection.offsetTop - 180; // Ajuste para compensar o cabeçalho fixo
+                const topPosition = targetSection.offsetTop - 180;
 
                 // Rolagem suave
                 window.scrollTo({
